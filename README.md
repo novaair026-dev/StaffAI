@@ -90,7 +90,6 @@ llm:
 
 支持的 API 服务商（只要兼容 OpenAI 接口格式的都行）：
 - DeepSeek
-- OpenAI
 - 通义千问
 - Moonshot
 - 其他兼容服务商...
