@@ -1,0 +1,40 @@
+# StaffAI 配置文件
+# 请复制此文件为 config.yaml 并填写你的 API Key
+
+# 大模型设置
+llm:
+  api_key: "在这里填写你的 API Key"
+  base_url: "https://api.deepseek.com"    # API 基础地址（OpenAI 兼容）
+  model: "deepseek-chat"                   # 模型名称
+  temperature: 0.7                         # 生成温度
+  max_tokens: 4096                         # 最大输出长度
+
+# 员工技能目录路径（相对于项目根目录）
+skills_dir: "员工技能目录"
+
+# Shell 安全策略
+shell:
+  # 白名单命令前缀：匹配这些前缀的命令自动执行，无需确认
+  whitelist:
+    - "say "
+    - "osascript -e 'display notification"
+    - "echo "
+    - "date"
+    - "cal"
+    - "ls "
+    - "cat "
+    - "pwd"
+    - "whoami"
+  # 黑名单：包含这些内容的命令永远拒绝执行
+  blacklist:
+    - "rm -rf /"
+    - "mkfs"
+    - "dd if="
+  # 命令执行超时（秒）
+  timeout: 30
+
+# Web 界面设置
+web:
+  host: "127.0.0.1"     # 仅本地访问
+  port: 7860             # 端口号
+  share: false           # 不开启公网共享

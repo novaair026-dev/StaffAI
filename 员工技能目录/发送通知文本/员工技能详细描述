@@ -1,0 +1,26 @@
+在Mac上面推送想要推送的自定义通知的命令示例如下：
+# 只有内容（最简单）
+osascript -e 'display notification "任务已经完成！"'
+
+# 带标题
+osascript -e 'display notification "脚本执行完毕" with title "任务完成"'
+
+# 带标题 + 副标题
+osascript -e 'display notification "所有文件已处理" with title "批量处理" subtitle "共 128 个文件"'
+
+# 带标题 + 副标题 + 声音
+osascript -e 'display notification "下载完成" with title "文件已就绪" subtitle "点击查看" sound name "Glass"'
+
+可用声音名称（部分常见）：
+Blow
+Bottle
+Frog
+Funk
+Glass
+Hero
+Morse
+Ping
+Pop
+Purr
+Sosumi
+Tink
